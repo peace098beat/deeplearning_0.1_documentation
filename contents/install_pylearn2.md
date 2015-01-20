@@ -165,6 +165,8 @@ pipを利用してインストール
 
 	sudo pip install --allow-external PIL PyYAML IPython Cython
 
+### Theanoのインストール
+
 Theanoは別コマンド
 
 	sudo pip install --upgrade --no-deps git+git://github.com/Theano/Theano.git
@@ -182,7 +184,26 @@ Theanoのインストールが成功したか確認
 	cd pylearn2
 	python setup.py develop
 
+
 ## データセットの構築
 
+
+
+
 ## 可視化
+
+### pylearn2のインストール時にこけたとき
+
+	clang: error: no such file or directory: 'pylearn2/utils/_window_flip.c'
+	clang: error: no input files
+
+_windows_flip.cファイルがないみたい。そのかわりに_windows_filip.pyxが存在している。この.pyxはCythonのコンパイル結果らしく、コンパイルのタイミング?が変らしい。?windows_flip.cをコピペで外部環境で持ってくると動くそうだが。  
+https://github.com/lisa-lab/pylearn2/issues/862
+
+setup.pyの中身でCythonのエクステンションの部分をコメントアウトする
+https://groups.google.com/forum/#!topic/pylearn-users/uLFGQw2he4E
+
+修正されたsetup.py  
+https://github.com/lisa-lab/pylearn2/blob/09dd4a3879934ea02dcca57aada197304e5ae6e2/setup.py
+
 
