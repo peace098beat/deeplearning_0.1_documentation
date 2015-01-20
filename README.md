@@ -2,8 +2,15 @@
 http://deeplearning.net/tutorialの勉強
 
 
-
 # 深層学習調査資料
+
+Qiita はじめるDeep learning
+http://qiita.com/icoxfog417/items/65e800c3a2094457c3a0
+
+pylearn2を使っての実装事例
+
+## googleでpdf検索
+'深層学習' + 'pdf'
 
 深層学習基本語録(40分で！図付き！)
 http://www.phontron.com/slides/neubig14deeplunch11-ja.pdf
@@ -69,8 +76,10 @@ kaggle
 http://www.kaggle.com/
 >Kaggleは企業や研究者がデータを投稿し、世界中の統計家やデータ分析家がその最適モデルを競い合う、予測モデリング及び分析手法関連プラットフォーム及びその運営会社である。 モデル作成にクラウドソーシング手法が採用される理由としては、いかなる予測モデリング課題には無数の戦略が適用可能であり、どの分析手法が最も効果的であるか事前に把握することは不可能であることに拠る。
 
+# Pylearn2 dev documentation
+http://deeplearning.net/software/pylearn2/index.html
 
-# Deep Learning documentation
+# Theano Deep Learning documentation
 
 Theanoを使った深層学習のドキュメント(聖典)
 
