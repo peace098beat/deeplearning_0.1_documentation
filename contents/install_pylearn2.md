@@ -28,6 +28,7 @@
 - homebrew
 
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	$ brew --version0.9.5
 
 
 ## 参考
@@ -55,6 +56,15 @@ http://deeplearning.net/software/theano/install.html
 - Python >=2.6
 
 - g++
+
+	$ brew install gcc48
+	// Error が発生
+
+	$ brew info gcc
+	// not installed 4.9があるけどインストールされていない
+
+さいどインストール
+	$ brew reinstall gcc
 
 - python-dev
 
