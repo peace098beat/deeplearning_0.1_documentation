@@ -143,3 +143,9 @@ http://blog.yusugomori.com/post/40250499669/python-deep-learning-deep-belief-net
 
 github
 https://github.com/yusugomori/DeepLearning
+
+
+# その他
+
+Gitをつかいこなすための20のコマンド
+http://sourceforge.jp/magazine/09/03/16/0831212
