@@ -178,6 +178,9 @@ Theanoのインストールが成功したか確認
 
 ### Pylearn2のインストール
 
+ここでは`~/tmp`にダウンロードします。`~/`はユーザフォルダをしめします。
+この後もこのフォルダを使っていきます。
+
 	mkdir ~/tmp
 	cd ~/tmp
 	git clone git://github.com/lisa-lab/pylearn2.git
@@ -187,10 +190,62 @@ Theanoのインストールが成功したか確認
 
 ## データセットの構築
 
+MNIST database  
+http://yann.lecun.com/exdb/mnist/
+
+CIFAR-10 & 100  
+http://www.cs.toronto.edu/~kriz/cifar.html
+
+The Oxford-IIIT Pet dataset  
+http://www.robots.ox.ac.uk/~vgg/data/pets/
+
+deeplearning.net datasets  
+http://deeplearning.net/datasets/
+
+kaggle
+https://www.kaggle.com/
+
+Microsoft Azure Marketplace
+https://datamarket.azure.com/browse/data
+
+
+# チュートリアル
+
+Quick-start exmaple
+http://deeplearning.net/software/pylearn2/tutorial/index.html#tutorial
+
+## Step0: download dataset
+
+今回解析するCIFAR-10をダウンロードします。  
+http://www.cs.toronto.edu/~kriz/cifar.html
+
+
+そして、Pylearn2の解析データを格納するディレクトリのパスを設定します(重要)。ここでは適当に`=/data/lisa/data'以下にファイルをおいてます。
+
+	export PYLEARN2_DATA_PATH=~/data/lisa/data
+	source ~/.bashrc
+	source ~/.bash_profile
+
+## Step1: Create the dataset
+
+	cd ~/tmp/pyleran2/pylearn2/scripts/tutorials/grbm_smd
+	python make_dataset.py
+
+## Step2: Train the model
+
+	train.py cifar_grbm_smd.yaml
+
+## Inspect the model
+
+	show_weights.py cifar_grbm_smd.pkl
+
+	plot_monitor.py cifar_grbm_smd.pkl
 
 
 
-## 可視化
+## 
+
+## エラー対処
 
 ### pylearn2のインストール時にこけたとき
 
@@ -205,5 +260,20 @@ https://groups.google.com/forum/#!topic/pylearn-users/uLFGQw2he4E
 
 修正されたsetup.py  
 https://github.com/lisa-lab/pylearn2/blob/09dd4a3879934ea02dcca57aada197304e5ae6e2/setup.py
+
+##
+
+>pipでパッケージのコンパイルが失敗する場合、一度uninstallすると動く場合があります。
+また、--upgradeが効くこともあります。
+
+	pip uninstall <package-name>
+	pip install --upgrade <package-name>
+
+
+>matplotlibがpipでinstall出来ない場合、brew経由だと成功する場合もあります。(要tap)
+
+	brew search matplotlib
+	brew tap homebrew/python
+	brew install matplotlib
 
 
