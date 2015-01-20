@@ -7,71 +7,72 @@ http://deeplearning.net/tutorial
 
 # 深層学習調査資料
 
-Qiita はじめるDeep learning
+Qiita はじめるDeep learning  
 http://qiita.com/icoxfog417/items/65e800c3a2094457c3a0
 
 pylearn2を使っての実装事例
 
 ## googleでpdf検索
+
 '深層学習' + 'pdf'
 
-深層学習基本語録(40分で！図付き！)
+深層学習基本語録(40分で！図付き！)  
 http://www.phontron.com/slides/neubig14deeplunch11-ja.pdf
 
-自然言語処理のための深層学習
+自然言語処理のための深層学習  
+ボレガラダヌシカ Danushka Bollegala リバープール大学  
 http://cgi.csc.liv.ac.uk/~danushka/papers/DeepNLP.pdf
-ボレガラダヌシカ Danushka Bollegala リバープール大学
 
-深層学習を用いたペアワイズ分類
+深層学習を用いたペアワイズ分類  
 http://hokkaido.ipsj.or.jp/info2014/papers/25/sample-sjis.pdf
 
-応用３分野におけるDeep Learning（深層学習）の研究
-の現状
+応用３分野におけるDeep Learning（深層学習）の研究の現状  
 http://ibisml.org/archive/ibis2013/pdfs/ibis2013-okatani.pdf
 
-Deep Learning 利用法と知見䛾体系化
+Deep Learning 利用法と知見䛾体系化  
 https://kaigi.org/jsai/webprogram/2014/pdf/766.pdf
 
-
-## 機械学習を知識ゼロから学ぶpdf (NAVERまとめ)
+## 機械学習を知識ゼロから学ぶpdf (NAVERまとめ)  
 http://matome.naver.jp/odai/2137978900585239401
 
 
-## GoogleやFacebookが注目するディープラーニング（深層学習）についてまとめてみた (NAVERまとめ)
+## GoogleやFacebookが注目するディープラーニング（深層学習）についてまとめてみた (NAVERまとめ)  
 http://matome.naver.jp/odai/214063557360 360401
 
 
-データマイニング 神嶌 敏弘
-http://www.kamishima.net/archive/datamining.pdf
-難しい数式なしに、データマイニングの基礎を、わかりやすく説明している！神嶌 敏弘先生の資料
+データマイニング 神嶌 敏弘  
 http://www.kamishima.net/archive/datamining.pdf
 
-機械学習の理論と実践
+難しい数式なしに、データマイニングの基礎を、わかりやすく説明している！神嶌 敏弘先生の資料  
+http://www.kamishima.net/archive/datamining.pdf
+
+機械学習の理論と実践  
+(機械学習のアルゴリズムなどを多数紹介。深層学習については紹介ていど)  
 http://sacsis.hpcc.jp/2013/files/sacsis2013_ml_okanohara.pdf
-(機械学習のアルゴリズムなどを多数紹介。深層学習については紹介ていど)
 
-テキストからの評判分析と機械学習 鍜治伸裕
+テキストからの評判分析と機械学習 鍜治伸裕  
 http://www.iip.ist.i.kyoto-u.ac.jp/sigfpai/past/sigfpai73-kaji.pdf
 
-一般物体認識における機械学習の利用＜画像認識と機械学習＞
+一般物体認識における機械学習の利用＜画像認識と機械学習＞  
 http://img.cs.uec.ac.jp/pub/conf10/100615yanai_7_ppt.pdf
 
-パターン認識と機械学習入門 Momoko Hayamizu
+パターン認識と機械学習入門 Momoko Hayamizu  
 http://www.slideshare.net/mmktakahashi/ss-13694313
 
-統計的機械学習入門 NTTコミュニケーション科学基礎研究所 上田 修功
+統計的機械学習入門 NTTコミュニケーション科学基礎研究所 上田 修功  
 http://www.nii.ac.jp/userdata/karuizawa/h23/111104_3rdlecueda.pdf
 
-推薦システムのアルゴリズム神嶌 敏弘
+推薦システムのアルゴリズム神嶌 敏弘  
 http://www.kamishima.net/archive/recsysdoc.pdf
 
-推薦システム Recommender System 神嶌 敏弘
+推薦システム Recommender System 神嶌 敏弘  
 http://www.kamishima.net/archive/recsys.pdf
 
 
+## 統計的機械学習入門  
 
-## 統計的機械学習入門
 http://www.r.dl.itc.u-tokyo.ac.jp/~nakagawa/SML1/index-SML.html
+
 
 # 公開統計データ
 
@@ -102,6 +103,7 @@ http://deeplearning.net/tutorial/contents.html
 
 (解説資料)
 
+
 ## Theano で Deep Learning
 
 Theano で Deep Learning <1> : MNIST データをロジスティック回帰で判別する
@@ -129,23 +131,56 @@ http://sinhrks.hatenablog.com/entry/2015/01/12/225149
 
 theanoを使わずnumpyだけで実装している。
 
-PythonによるDeep Learningの実装 （Restricted Boltzmann Machine 編）
+PythonによるDeep Learningの実装 （Restricted Boltzmann Machine 編）  
+制約付きボルツマンマシンの説明  
 http://blog.yusugomori.com/post/39741567354/python-deep-learning-restricted-boltzmann
-制約付きボルツマンマシンの説明
 
-PythonによるDeep Learningの実装 （Logistic Regression 編）
+PythonによるDeep Learningの実装 （Logistic Regression 編）  
+ロジスティック回帰の説明  
 http://blog.yusugomori.com/post/39830852050/python-deep-learning-logistic-regression
-ロジスティック回帰の説明
 
-PythonによるDeep Learningの実装 （Deep Belief Nets 編）
+PythonによるDeep Learningの実装 （Deep Belief Nets 編）  
+上の２つを組み合わせて実装されている Deep Belief Nets (DBN) について紹介  
 http://blog.yusugomori.com/post/40250499669/python-deep-learning-deep-belief-nets
-上の２つを組み合わせて実装されている Deep Belief Nets (DBN) について紹介
 
-github
+github  
 https://github.com/yusugomori/DeepLearning
+
+
+# データセット
+
+http://deeplearning.net/datasets/
+
+
+# 励みになる資料
+
+機械学習クソ素人の俺がプロダクトをリリースするまでの2ヶ月で覚えたこと  
+http://qiita.com/puriketu99/items/c519a95c0b16ea63c1ac
+
+【募集】プログラミングのスキル交換をしませんか  
+http://qiita.com/puriketu99/items/7370901978887fe59a49
 
 
 # その他
 
-Gitをつかいこなすための20のコマンド
+Gitをつかいこなすための20のコマンド  
 http://sourceforge.jp/magazine/09/03/16/0831212
+
+ネイティブと働いて分かった英語コミットメッセージの頻出動詞10つ  
+http://qiita.com/gogotanaka/items/b65e1b081fa976e5d754
+
+	Add A to B
+	Remove A to B 		(AをBから取り除く)
+	Move A from B to C 	(AをBからCへ動かす)
+	Replace A with B
+	Make A B
+
+	Change A to B
+	Update A to B
+	Ensure A that B
+	Use A
+
+
+
+
+
