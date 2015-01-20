@@ -15,17 +15,26 @@
 - merveric
 
 - Python
+
+Pythonは2.7系を利用する
 	
 	$ python --version
 	Python 2.7.5
 
 - gcc
 
+macbookのgccの環境を調べる
+
 	$ gcc -v
 	Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1 Apple LLVM version 6.0 (clang-600.0.56) (based on LLVM 3.5svn)Target: x86_64-apple-darwin13.4.0
 	Thread model: posix
 
+appleのコンパイラclangが設定されている。
+今回はgccの必要があるため、後ほど設定する。
+
 - homebrew
+
+homebrewのインストール
 
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	$ brew --version0.9.5
@@ -44,6 +53,8 @@ http://deeplearning.jp/?p=196
 
 ## 前提
 
+0からPylearn2を動かすまでを前提にします。
+
 >「Pylearn2のMaxout Networkを、手元のMacbookで動かす」ことを目標に、解説します。
 (LinuxとWindowsは、この記事の対象外です。)
 
@@ -55,7 +66,13 @@ http://deeplearning.net/software/theano/install.html
 
 - Python >=2.6
 
+	(今回はPython2.7系が入っているので省略します)
+
 - g++
+
+homebrewを使ってgccをインストールします。
+
+	% gcc -v
 
 	$ brew install gcc48
 	// Error が発生
@@ -63,8 +80,13 @@ http://deeplearning.net/software/theano/install.html
 	$ brew info gcc
 	// not installed 4.9があるけどインストールされていない
 
-さいどインストール
+再インストール
+	
 	$ brew reinstall gcc
+
+このままではapple標準のclangが優先されてしまいエラーが発生するので、gccの優先度をあげます
+
+	ln -s /usr/local/bin/gcc-4.8 /usr/local/bin/gcc
 
 - python-dev
 
@@ -107,7 +129,7 @@ http://gihyo.jp/dev/serial/01/machine-learning/0006
 
 - Git
 	
-	今回は省略(インストール済み)
+	pip 省略(インストール済み)
 
 - pydot (make picture of Theano compuration graph)
 
@@ -124,16 +146,6 @@ https://code.google.com/p/pydot/
 - NVIDIA CUDA drivers and SDK
 - libgpuarray
 
-## gccコンパイラの設定
-
-- gcc4.8をインストール
-
-	brew install gcc48
-
-- gccをclangより優先度をあげる
-
-	ln -s /usr/local/bin/gcc-4.8 /usr/local/bin/gcc
-
 
 ### 依存パッケージのインストール
 
@@ -149,19 +161,24 @@ pipを利用してインストール
 
 	sudo pip install PIL PyYAML IPython Cython
 
+失敗した場合
+
+	sudo pip install --allow-external PIL PyYAML IPython Cython
+
 Theanoは別コマンド
 
 	sudo pip install --upgrade --no-deps git+git://github.com/Theano/Theano.git
 
 Theanoのインストールが成功したか確認
 	
-	import theano
-
-(コンパイルにはclangではなくgcc)
+	$ python
+	>>> import theano
 
 ### Pylearn2のインストール
 
-	git clone git://github.com/lisa-lab/pylearn2.gt
+	mkdir ~/tmp
+	cd ~/tmp
+	git clone git://github.com/lisa-lab/pylearn2.git
 	cd pylearn2
 	python setup.py develop
 
