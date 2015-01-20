@@ -1,5 +1,8 @@
 # deeplearning_0.1_documentation
-http://deeplearning.net/tutorialの勉強
+
+http://deeplearning.net/tutorial
+
+の勉強
 
 
 # 深層学習調査資料
