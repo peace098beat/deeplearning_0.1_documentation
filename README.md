@@ -90,9 +90,10 @@ http://deeplearning.net/tutorial/contents.html
 
 (解説資料)
 
+## Theano で Deep Learning
+
 Theano で Deep Learning <1> : MNIST データをロジスティック回帰で判別する
 http://sinhrks.hatenablog.com/entry/2014/11/26/002818
-
 
 Theano で Deep Learning <2> : 多層パーセプトロン
 http://sinhrks.hatenablog.com/entry/2014/11/30/085119
@@ -112,4 +113,21 @@ http://sinhrks.hatenablog.com/entry/2014/12/30/221538
 Theano で Deep Learning <6>: 制約付きボルツマンマシン <前編>
 http://sinhrks.hatenablog.com/entry/2015/01/12/225149
 
+## PythonによるDeep Learningの実装
 
+theanoを使わずnumpyだけで実装している。
+
+PythonによるDeep Learningの実装 （Restricted Boltzmann Machine 編）
+http://blog.yusugomori.com/post/39741567354/python-deep-learning-restricted-boltzmann
+制約付きボルツマンマシンの説明
+
+PythonによるDeep Learningの実装 （Logistic Regression 編）
+http://blog.yusugomori.com/post/39830852050/python-deep-learning-logistic-regression
+ロジスティック回帰の説明
+
+PythonによるDeep Learningの実装 （Deep Belief Nets 編）
+http://blog.yusugomori.com/post/40250499669/python-deep-learning-deep-belief-nets
+上の２つを組み合わせて実装されている Deep Belief Nets (DBN) について紹介
+
+github
+https://github.com/yusugomori/DeepLearning
