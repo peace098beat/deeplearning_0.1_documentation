@@ -245,12 +245,15 @@ train.pyは/pyleran2/pylearn2/scripts/内にあります。
 
 ## Step3: Inspect the model
 
+可視化用のオプションを設定(大事)
+
 	export PYLEARN2_VIEWER_COMMAND="open -Wn"
-	source ~/.bashrc
-	source ~/.bash_profile
+	source ~/.bashrc (なくても動く)
+	source ~/.bash_profile (なくても動く)
+
+データの表示コマンドをたたく。
 
 	python show_weights.py cifar_grbm_smd.pkl
-
 	plot_monitor.py cifar_grbm_smd.pkl
 
 
@@ -306,13 +309,39 @@ http://rewish.jp/blog/misc/mbp_mid_2009
 
 http://d.hatena.ne.jp/zariganitosh/20100206/1265436726
 
+## Step1: でこけたとき (注意)
+
+	Mac OS X
+	========
+
+	Environment variables on Mac OS X work the same as in Linux, except you should
+	modify and run the "source" command on ~/.profile rather than ~/.bashrc.
+
+
+	Original exception:
+		KeyError: PYLEARN2_DATA_PATH
+
+ここまで、解析データの保存先が下のようになっているとするとき。
+
+	~/data/cifar1-0/cifar-10-batches-py/data_batch_1
+
+`PYLEARN2_DATA_PATH`に設定するのは`/data`まで。つまり
+
+	export PYLEARN2_DATA_PATH=~/data
+
+これだけ。
+
+
+PYLEARN2_DATA_PATHに設定するパスは
+
+	export PYLEARN2_DATA_PATH=~/data
+
 
 ## Step3: Inspect the modelでこけたとき
 
 以下のコマンドで結果を表示しようとした際にエラー
 
 	show_weights.py cifar_grbm_smd.pkl
-
 
 	Mac OS X
 	========
