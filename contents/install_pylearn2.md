@@ -159,11 +159,13 @@ https://code.google.com/p/pydot/
 
 pipを利用してインストール
 
-	sudo pip install PIL PyYAML IPython Cython
+	sudo pip install PyYAML IPython Cython
 
-失敗した場合
+PILのインストールに失敗した場合
 
-	sudo pip install --allow-external PIL PyYAML IPython Cython
+	sudo pip install pillow
+
+なぜかわからないが`pillow`ってのをインストールすると代用できた。
 
 ### Theanoのインストール
 
@@ -253,7 +255,12 @@ train.pyは/pyleran2/pylearn2/scripts/内にあります。
 
 データの表示コマンドをたたく。
 
+RBMにより学習したフィルタを表示します
+
 	python show_weights.py cifar_grbm_smd.pkl
+
+よくわからない。学習による誤り率の低下を表しているそうです。ここらは今後ということで。
+
 	plot_monitor.py cifar_grbm_smd.pkl
 
 
@@ -352,8 +359,32 @@ PYLEARN2_DATA_PATHに設定するパスは
 
 `PYLEARN2_VIEWER_COMMAND`が設定されてないと、エラーが発生
 
+その２
 
-
+	$ ~/MachineLearning/pylearn2/pylearn2/scripts/show_weights.py cifar_grbm_smd.pkl
+	making weights report
+	loading model
+	loading done
+	loading dataset...
+	...done
+	smallest enc weight magnitude: 1.46641060449e-07
+	mean enc weight magnitude: 0.0581363279697
+	max enc weight magnitude: 1.03551020748
+	min norm: 0.840715049853
+	mean norm: 1.37598831115
+	max norm: 1.90010889382
+	Traceback (most recent call last):
+	  File "/Users/noharatomoyuki/MachineLearning/pylearn2/pylearn2/scripts/show_weights.py", line 52, in <module>
+	    show_weights(args.path, args.rescale, args.border, args.out)
+	  File "/Users/noharatomoyuki/MachineLearning/pylearn2/pylearn2/scripts/show_weights.py", line 31, in show_weights
+	    pv.show()
+	  File "/Users/noharatomoyuki/MachineLearning/pylearn2/pylearn2/gui/patch_viewer.py", line 366, in show
+	    show(self.image)
+	  File "/Users/noharatomoyuki/MachineLearning/pylearn2/pylearn2/utils/image.py", line 141, in show
+	    ensure_Image()
+	  File "/Users/noharatomoyuki/MachineLearning/pylearn2/pylearn2/utils/image.py", line 39, in ensure_Image
+	    raise RuntimeError("You are trying to use PIL-dependent functionality"
+	RuntimeError: You are trying to use PIL-dependent functionality but don't have PIL installed.
 
 
 
