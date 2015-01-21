@@ -222,30 +222,40 @@ http://www.cs.toronto.edu/~kriz/cifar.html
 
 そして、Pylearn2の解析データを格納するディレクトリのパスを設定します(重要)。ここでは適当に`=/data/lisa/data'以下にファイルをおいてます。
 
-	export PYLEARN2_DATA_PATH=~/data/lisa/data
+	export PYLEARN2_DATA_PATH=~/MachineLearning/data/
 	source ~/.bashrc
 	source ~/.bash_profile
 
+データのダウンロード
+
+datasetsフォルダにあるdownload_cifar10.shというシェルスクリプトをたたくとダウンロードされます。(このときダウンロード先は先ほど.bashrcに登録した`PYLEARN2_DATA_PATH`に保存されます)
+
+	~/MachineLearning/pylearn2/scripts/datasets/download_cifar10.sh
+
 ## Step1: Create the dataset
 
-	cd ~/tmp/pyleran2/pylearn2/scripts/tutorials/grbm_smd
+	cd ~/MachineLearning/pyleran2/pylearn2/scripts/tutorials/grbm_smd
 	python make_dataset.py
 
 ## Step2: Train the model
 
-	train.py cifar_grbm_smd.yaml
+train.pyは/pyleran2/pylearn2/scripts/内にあります。
 
-## Inspect the model
+	~/MachineLearning/pylearn2/pylearn2/scripts/train.py cifar_grbm_smd.yaml
 
-	show_weights.py cifar_grbm_smd.pkl
+## Step3: Inspect the model
+
+	export PYLEARN2_VIEWER_COMMAND="open -Wn"
+	source ~/.bashrc
+	source ~/.bash_profile
+
+	python show_weights.py cifar_grbm_smd.pkl
 
 	plot_monitor.py cifar_grbm_smd.pkl
 
 
 
-## 
-
-## エラー対処
+# エラー対処
 
 ### pylearn2のインストール時にこけたとき
 
@@ -261,7 +271,7 @@ https://groups.google.com/forum/#!topic/pylearn-users/uLFGQw2he4E
 修正されたsetup.py  
 https://github.com/lisa-lab/pylearn2/blob/09dd4a3879934ea02dcca57aada197304e5ae6e2/setup.py
 
-##
+## その他
 
 >pipでパッケージのコンパイルが失敗する場合、一度uninstallすると動く場合があります。
 また、--upgradeが効くこともあります。
@@ -275,5 +285,50 @@ https://github.com/lisa-lab/pylearn2/blob/09dd4a3879934ea02dcca57aada197304e5ae6
 	brew search matplotlib
 	brew tap homebrew/python
 	brew install matplotlib
+
+## .bashrcの作成
+
+http://rewish.jp/blog/misc/mbp_mid_2009
+
+>デフォルトの設定ではターミナルログイン時に.bashrc_が読み込まれないので、.bash_profile_を以下のように作成。
+
+	echo source ~/.bashrc >> ~/.bash_profile
+
+>これでターミナルログイン時に.bashrcが読み込まれるようになる。
+
+## /pylearn2/scriptsにpathを通す
+
+	export PATH=~/pylearn2/pylearn2/scripts/:$PATH
+	source ~/.bashrc
+	source ~/.bash_profile
+
+## シェルスクリプト
+
+http://d.hatena.ne.jp/zariganitosh/20100206/1265436726
+
+
+## Step3: Inspect the modelでこけたとき
+
+以下のコマンドで結果を表示しようとした際にエラー
+
+	show_weights.py cifar_grbm_smd.pkl
+
+
+	Mac OS X
+	========
+	Environment variables on Mac OS X work the same as in Linux, except you shouldmodify and run the "source" command on ~/.profile rather than ~/.bashrc.
+
+	Original exception:
+		KeyError: PYLEARN2_VIEWER_COMMAND
+
+`PYLEARN2_VIEWER_COMMAND`が設定されてないと、エラーが発生
+
+
+
+
+
+
+
+
 
 
