@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #-------------------------------------------------------------------------
 # Name:        NewralNetwork_02.py
 # Purpose:      First NewralNetwork Algorizm
@@ -7,7 +8,6 @@
 # Created:     27/01/2015
 # URL:          http://tjo.hatenablog.com/entry/2013/05/01/190247
 #-------------------------------------------------------------------------
-# -*- coding: utf-8 -*-
 
 # 演算用にNumPyを、プロット用にmatplotlibをimport
 import numpy as np
@@ -105,3 +105,5 @@ if __name__ == '__main__':
     plt.scatter(class_2[:, 0], class_2[:, 1], marker='o', color='r', s=100)
     plt.plot(x_fig, y_fig)
     plt.show()
+
+    time.sleep(10)
