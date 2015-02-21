@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #-------------------------------------------------------------------------
 # Name:        NewralNetwork_01.py
 # Purpose:      First NewralNetwork Algorizm
@@ -7,7 +8,6 @@
 # Created:     27/01/2015
 # URL:          http://tjo.hatenablog.com/entry/2013/05/01/190247
 #-------------------------------------------------------------------------
-# -*- coding: utf-8 -*-
 
 # 演算用にNumPyを、プロット用にmatplotlibをimport
 import numpy as np
